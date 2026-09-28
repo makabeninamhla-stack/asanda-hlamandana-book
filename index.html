@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asanda Hlamandana | Strong Is a Lonely Place</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --gold: #d3ad6c;
+      --cream: #f3e6d5;
+      --dark: #11100f;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "DM Sans", sans-serif;
+    }
+
+    .navbar {
+      background: var(--dark);
+      padding: 22px 6%;
+    }
+
+    .brand {
+      color: #e6c79b !important;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 30px;
+      line-height: 0.9;
+      letter-spacing: 3px;
+    }
+
+    .brand small {
+      display: block;
+      font-size: 15px;
+      margin-top: 10px;
+    }
+
+    .navbar .nav-link {
+      color: #e6c79b !important;
+      font-size: 18px;
+      margin: 0 14px;
+    }
+
+    .navbar .nav-link:hover {
+      color: white !important;
+    }
+
+    .gold-btn {
+      display: inline-block;
+      background: linear-gradient(110deg, #c99e55, #f1d49b, #c99e55);
+      color: #17120d;
+      border: none;
+      border-radius: 40px;
+      padding: 13px 34px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .gold-btn:hover {
+      background: #efd19b;
+      color: #17120d;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 46% 54%;
+      min-height: 650px;
+    }
+
+    .hero-text {
+      background: var(--cream);
+      padding: 75px 8%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .line {
+      width: 65px;
+      height: 3px;
+      background: #bf995b;
+      margin-bottom: 35px;
+    }
+
+    h1, h2, blockquote {
+      font-family: "Cormorant Garamond", serif;
+    }
+
+    h1 {
+      font-size: clamp(46px, 4.5vw, 76px);
+      line-height: 1.04;
+      margin-bottom: 18px;
+    }
+
+    h1 span {
+      display: block;
+      color: #44291c;
+      font-size: 0.78em;
+      margin-top: 15px;
+    }
+
+    .author {
+      color: #a47d48;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 32px;
+    }
+
+    .description {
+      font-size: 19px;
+      line-height: 1.6;
+      margin: 22px 0 28px;
+    }
+
+    .availability {
+      margin-top: 30px;
+      font-size: 15px;
+    }
+
+    .quote {
+      margin-top: 25px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 27px;
+      font-style: italic;
+    }
+
+    /* The supplied image is a screenshot. This displays its right half. */
+     .hero-image {
+  width: 100%;
+  height: 100%;
+  min-height: 650px;
+  object-fit: cover;
+  object-position: center 35%;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .hero-image {
+    height: 500px;
+    min-height: 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .hero-image {
+    height: 370px;
+  }
+}
+
+    
+
+    section.info {
+      padding: 90px 20px;
+      text-align: center;
+    }
+
+    section.info .container {
+      max-width: 760px;
+    }
+
+    section.info h2 {
+      font-size: 55px;
+      margin-bottom: 20px;
+    }
+
+    section.info p {
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .about, .praise {
+      background: #f7eee3;
+    }
+
+    .book {
+      background: #191613;
+      color: #f7ecdb;
+    }
+
+    .contact {
+      background: #fffaf3;
+    }
+
+    footer {
+      background: var(--dark);
+      color: #d5b987;
+      text-align: center;
+      padding: 25px;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-text {
+        padding: 65px 8%;
+      }
+
+      .hero-image {
+        min-height: 500px;
+      }
+    }
+
+    @media (max-width: 550px) {
+      .hero-image {
+        min-height: 370px;
+      }
+
+      section.info {
+        padding: 65px 20px;
+      }
+
+      section.info h2 {
+        font-size: 42px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand brand" href="#home">
+        ASANDA
+        <small>HLAMANDANA</small>
+      </a>
+
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#menu"
+              aria-controls="menu" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#book">Book</a></li>
+          <li class="nav-item"><a class="nav-link" href="#praise">Praise</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+
+        <a class="gold-btn mt-3 mt-lg-0"
+  <a href="#book" class="gold-btn">Buy Now</a>
+  Buy Now
+</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <div class="line"></div>
+
+        <h1>
+          Strong Is a Lonely Place:
+          <span>The Hidden Cost of Being the Sacrificial Lamb</span>
+        </h1>
+
+        <p class="author">by Asanda Hlamandana</p>
+
+        <p class="description">
+          A memoir on resilience, healing, and finding purpose in pain.
+        </p>
+
+        <a class="gold-btn"
+   <a href="#book" class="gold-btn">Buy Now</a>
+  Buy Now →
+</a>
+
+        <p class="availability">
+          ▤ &nbsp; Now available in Paperback · eBook · Audiobook
+        </p>
+
+        <p class="quote">“Unflinching. Powerful. Transformative.”</p>
+      </div>
+
+    <img class="hero-image" src="asanda.jpg/IMG_8879.jpeg" alt="Asanda Hlamandana holding her book">
+>
+    </section>
+
+   <!-- About -->
+<section class="info about" id="about">
+  <div class="container">
+    <h2>About Asanda</h2>
+    <p>
+      Asanda Hlamandana is the author of
+      <em>Strong Is a Lonely Place</em>, a memoir about resilience,
+      healing, and finding purpose in pain.
+    </p>
+  </div>
+</section>
+
+    <a class="gold-btn m-2"
+       href="https://wa.me/27825504102?text=Hello%2C%20I%20would%20like%20to%20order%20Strong%20Is%20a%20Lonely%20Place."
+       target="_blank" rel="noopener noreferrer">
+      Order on WhatsApp
+    </a>
+
+    <a class="gold-btn m-2"
+       href="https://wa.me/27825504102?text=Hello%2C%20I%20would%20like%20to%20order%20Strong%20Is%20a%20Lonely%20Place%20and%20pay%20by%20bank%20transfer.%20Please%20send%20me%20the%20payment%20details."
+       target="_blank" rel="noopener noreferrer">
+      Pay by Bank Transfer
+    </a>
+
+    <p class="mt-4">
+      Alternative:
+      <a class="text-warning" href="https://wa.me/27719723271"
+         target="_blank" rel="noopener noreferrer">071 972 3271</a>
+    </p>
+  </div>
+</section>
+        </p>
+      </div>
+    </section>
+
+    <!-- Book -->
+    <section class="info book" id="book">
+      <div class="container">
+        <h2>Strong Is a Lonely Place</h2>
+        <p>The Hidden Cost of Being the Sacrificial Lamb</p>
+        <p>Available in Paperback · eBook · Audiobook</p>
+        <p><small>Add the official purchase links here.</small></p>
+      </div>
+    </section>
+
+    <!-- Praise -->
+    <section class="info praise" id="praise">
+      <div class="container">
+        <h2>Praise</h2>
+        <blockquote>“Unflinching. Powerful. Transformative.”</blockquote>
+      </div>
+    </section>
+    
+  <!-- Contact -->
+<section class="info contact" id="contact">
+  <div class="container">
+    <h2>Contact</h2>
+
+    <p>
+      WhatsApp orders:
+      <a
+        href="https://wa.me/27825504102?text=Hello%2C%20I%20would%20like%20to%20order%20Strong%20Is%20a%20Lonely%20Place."
+        target="_blank"
+        rel="noopener noreferrer"
+      >082 550 4102</a>
+    </p>
+
+    <p>
+      Phone calls:
+      <a href="tel:+27719723271">071 972 3271</a>
+    </p>
+
+    <p>
+      Facebook:
+      <a
+        href="https://www.facebook.com/share/1FAPjUgrKf/?mibextid=wwXIfr"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Asanda Hlamandana</a>
+    </p>
+  </div>
+</section>
+</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Asanda Hlamandana
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
